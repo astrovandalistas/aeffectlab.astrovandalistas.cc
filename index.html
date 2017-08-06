@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>*Astrovandalistas | Open Hardware, Physical Computing, Hacktivismo</title>
+	
+<link rel="stylesheet" type="text/css" href="css/default_dark_light.css" />
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->	
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+    
+<!-- Anything Slider -->
+<link rel="stylesheet" type="text/css" href="css/theme-main.css" />    
+
+<!-- FancyBox CSS -->
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
+
+<!-- colorpicker CSS -->
+<link rel="stylesheet" media="screen" type="text/css" href="css/colorpicker.css" />
+  
+<link rel="shortcut icon" type="image/x-icon" href="images/favicons/favicon.ico">
+
+<style type="text/css">
+a:link {
+	color: #999999;
+}
+</style>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+<!-- custom-dark-light.js include nenu hover color chagne for dark left and light right theme -->
+<script src="js/custom-dark-light.js" type="text/javascript"></script>
+
+<!-- js/custom.js includes all custom js function which used in theme -->
+<script src="js/custom.js" type="text/javascript"></script>
+
+<!-- hoverIntent.js is plugin for hover effect -->
+<script src="js/hoverIntent.js" type="text/javascript"></script>
+
+<!-- For Cufon font replacement -->
+<script src="js/cufon-yui.js" type="text/javascript"></script>
+<script src="js/kalinga.font.js" type="text/javascript"></script>
+
+<!-- For Fancy Popup -->
+<script src="js/jquery.mousewheel-3.0.4.pack.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+
+<!-- Anything Slider -->
+<script src="js/jquery.anythingslider.js" type="text/javascript"></script>
+
+
+
+
+
+<!-- AnythingSlider initialization -->
+	<script type="text/javascript">
+		// DOM Ready
+		$(function(){
+		
+			// this is AnyThingSlider initialization for more settings option visit: http://proloser.github.com/AnythingSlider/ 
+			$('#slider').anythingSlider({
+			
+					theme               : "main",
+					autoPlay            : true,
+					buildStartStop      : false,
+					navigationFormatter : null,
+					toggleArrows        : false,     // If true, side navigation arrows will slide out on hovering and hide @ other times
+				  	toggleControls      : false,     // if true, slide in controls (navigation + play/stop button) on hover and slide change, hide @ other times
+					pauseOnHover        : true,
+					resizeContents      : true,
+					easing              : "easeInOutBack",
+	 				animationTime       : 1400       // we can change delay here					     
+					
+					//Note:  to change the height of Slider please go to css/theme-main.css and change height of "div.anythingSlider-main" class					
+			});
+			
+
+	
+			
+						
+		// this is fancybox ( image overlay ) initialization for more option visit: http://fancybox.net/
+		// Auto Play youtube with fancy box : please ad " &autoplay=1 " at the end of youtube video url
+		$(".fancyBox").fancybox({
+				'overlayShow'	: true
+		});
+			
+		// this is fancybox ( video overlay ) initialization for youtube video for more option visit: http://fancybox.net/
+		$(".video_fancybox").click(function() {
+		$.fancybox({
+				'padding'		: 0,
+				'autoScale'		: false,
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none',
+				'title'			: this.title,
+				'width'		: 680,
+				'height'		: 495,
+				'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+				'type'			: 'swf',
+				'swf'			: {
+				'wmode'		: 'transparent',
+				'allowfullscreen'	: 'true'
+				}
+			});
+	
+			return false;
+		});			
+			
+
+		// this is fancybox ( grouped image overlay ) initialization for more option visit: http://fancybox.net/
+		$("a[rel=group_fancybox]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">'+ title +' <cite> Image' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? '' : '') + '</cite></span>';
+				}
+		});
+
+			
+		});
+	</script>
+    
+</head>   
+ 
+<body>
+
+<div class="wrapper">
+<!-- 
+	class="leftPanel" this div contain left panle and its Static  
+	class="leftPanel_inner" this div contain background of left panel
+    class="leftPanel_inner_border" this div contain right border of left panel
+-->
+<div class="leftPanel">
+	<div class="leftPanel_inner">
+		<div class="leftPanel_inner_border">    
+    		<div class="logo_container">
+            	<img alt="Stratum" src="images/dark_light/logo.png" />
+            </div>
+    		<p class="intro_text"><a href="index_eng.html">English </a></p>            
+
+<!-- //////////////////////////////////////////// Left Navigation Start //////////////////////////////////////////////////// -->            
+            <ul class="nav_bar">
+                <!--  <li><a><span> use these tags for every menu item -->            
+            	<li class="active_link"><a href="#page_Home"><span>AEffect Lab </span></a></li>                
+            	<li><a href="#page_LatestProjects"><span>Proyectos anteriores</span></a></li>
+            	<li><a href="#page_About"><span>Sobre Nosotros</span></a></li>
+            	<li><a href="#page_presskit"><span>Presskit</span></a></li>
+            </ul>
+<!-- ///////////////////////////////////////////// Left Navigation End ///////////////////////////////////////////////////// -->
+            
+            <div class="socialIcon"> 
+                <!--  there are 40 social bookmark icons you can use as many as you want all 40 are listed below with there classes -->
+                
+                <a class="facebook" title="facebook" href="https://www.facebook.com/pages/Astrovandalistas/115153808562518"><span></span></a><a class="twitter2" title="twitter" href="https://twitter.com/astrovandalista"><span></span></a>
+                                
+				<!--            	
+				List of all avilable icons you can use these
+
+                <a class="amazon" title="amazon" href="javascript:void(0)"><span></span></a>
+            	<a class="delicious" title="delicious" href="javascript:void(0)"><span></span></a>   
+                <a class="flickr" title="flickr" href="javascript:void(0)"><span></span></a>
+            	<a class="googletalk" title="googletalk" href="javascript:void(0)"><span></span></a>
+                <a class="itunes" title="itunes" href="javascript:void(0)"><span></span></a>
+                <a class="google" title="google" href="javascript:void(0)"><span></span></a>
+            	<a class="messenger" title="messenger" href="javascript:void(0)"><span></span></a>
+            	<a class="openid" title="openid" href="javascript:void(0)"><span></span></a>
+                <a class="skype" title="skype" href="javascript:void(0)"><span></span></a>
+            	<a class="tumbrl" title="tumbrl" href="javascript:void(0)"><span></span></a>
+            	<a class="twitter" title="twitter" href="javascript:void(0)"><span></span></a>
+            	<a class="vimeo" title="vimeo" href="javascript:void(0)"><span></span></a>
+                <a class="wikipedia" title="wikipedia" href="javascript:void(0)"><span></span></a>
+                <a class="youtube" title="youtube" href="javascript:void(0)"><span></span></a>
+                -->
+                
+
+            </div>
+            
+  		</div>
+    </div>
+</div>
+
+
+
+<div class="rightPanel">
+	<div class="rightPannelInner">
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////// Home container Start//////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div id="page_Home">        	
+            
+            <p>
+              
+              <!--  this is place for home text if you want you can add any type of text or content here or remove this part if you dont need --><img src="images/dark_light/astroInv.png" width="650" height="599" /><br />
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+            <h3 dir="ltr" id="docs-internal-guid-4bd5f946-e6df-babe-5742-1c99a5ef1061">&nbsp;</h3>
+            <h3 dir="ltr">&nbsp;</h3>
+          <p dir="ltr">&nbsp;</p>
+            <h3 dir="ltr">&nbsp;</h3>
+            <h3 dir="ltr">&nbsp;</h3>
+            <h3 dir="ltr"><strong>Æffect Lab _ Tecnologías Disruptivas </strong></h3>
+            <br />
+            <br />
+            <blockquote>
+              <p dir="ltr">Disruptivo será todo evento o situación con la capacidad potencial de irrumpir en el psiquismo y producir reacciones que alteren su capacidad integradora y de elaboración. &nbsp;</p>
+              <p dir="ltr">M. Benyakar.</p>
+            </blockquote>
+            <br />
+            <br />
+            <h5 dir="ltr">Æffect Lab es un framework para facilitar la creación de modelos afectivos de comunicación, pertinentes para un determinado espacio, localidad o grupo de personas.</h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr">El proyecto consiste en la investigación y creación de una red de comunicación libre basada en la afectividad: una red paralela a internet en la cual se desenvuelve la cooperación y la comunicación humano-humano.</h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr">Esta red gira en torno a la creación de diversos prototipos de hardware para colocar mensajes virtuales en el espacio físico. Los prototipos son: el <strong>Arma Sonora Telemática</strong>, la <strong>Ventana de Lecturas Efímeras</strong>, el <strong>Campo de Afinidades Ubicuas</strong> y el<strong> Dispositivo Sintetizador de Opinión. </strong></h5>
+            <h5><br />
+          </h5>
+            <h5 dir="ltr">Como base para todos los dispositivos, desarrollamos un módulo llamado LocalNet: un dispositivo capaz de recibir mensajes enviados a la red Æffect Lab y redireccionarlos a los prototipos. Dicha red está conformada por nuestra aplicación web, números de teléfono para recibir mensajes SMS, hashtags de Twitter y redes locales autónomas corriendo una copia de nuestra aplicación web.</h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr">Los prototipos que presentamos son sólo algunos ejemplos para ofrecer una panorámica de cómo funciona el framework. Éstos se plantearon a partir de nuestras propias experiencias y necesidades. Buscamos producir una conversación en torno a las posibilidades integradoras de este tipo de herramientas de comunicación, para así generar cuestionamientos sobre el uso y aplicación de estos sistemas en la cooperación cercana con diversas comunidades. </h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr">¿Cuáles son los límites físicos y virtuales de comunicaciones que ocurren en espacios de mediación comercial?</h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr">¿Qué distancias generan estos límites entre los usuarios de una red?</h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr">¿Cómo garantizar la participación colectiva en estructuras sociales en constante transformación, donde la velocidad del desarrollo tecnológico supera nuestras capacidades de aprendizaje?</h5>
+          <h5><br />
+          </h5>
+            <h5 dir="ltr">Æffect Lab opera bajo la lógica del hacking urbano: la aplicación de recursos tecnológicos para modificar elementos de la infraestructura urbana, dotándolos de la capacidad de control telemático.</h5>
+          <h5><br />
+          Con esta exposición damos inicio al proyecto. Mostraremos los primeros acercamientos a la investigación y desarrollo, mismos que continuarán en proceso durante los próximos meses y se materializarán en talleres e intervenciones en México y Estados Unidos.            </h5>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          <p>&nbsp;</p>
+            <p><img src="images/portfolio_images/aeffectlab.jpg" width="680" height="456" /></p>
+            <p>&nbsp;</p>
+          <p>&nbsp; </p>
+          <p><img src="images/portfolio_images/IMG_0294.jpg" width="680" height="456" /></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><img src="images/portfolio_images/IMG_0303.jpg" width="680" height="456" /></p>
+          <p>&nbsp;</p>
+          <p><img src="images/portfolio_images/IMG_0264.jpg" width="680" height="456" /></p>
+            
+            <div class="page_saperator"></div>
+            
+        </div>
+        
+
+<!--////////////////////////////////////////////// Home container End //////////////////////////////////////////////////// -->
+
+
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////// Latest Project container Start ///////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div id="page_LatestProjects" class="paddingTop40">
+        	
+            <div class="page_title">
+               <h2>Proyectos anteriores</h2>
+            </div>
+            
+            <!-- Slider start from here we used Anything slider plugin -->
+            <div class="anything_slider">
+            	<ul id="slider">
+
+                                
+                                <!-- 1st Slide start from here if you use dynamic slider item you can use this LI as a repeater it will display list of items -->
+                                <li>
+                                	<div class="slide_left_content">
+                                    	<div class="slide_content">
+                                        	<div class="slide_title">
+                                       	  <h2>Arma Sonora Telemática </h2></div>
+                                        	<div class="slide_description">                                            	
+                                                <p><span id="docs-internal-guid-418abdb6-e8b0-8689-25fc-d7205cc0c7cc">Un arma es un dispositivo que amplía la dirección y la magnitud de una fuerza. Nosotros quisimos amplificar un cuestionamiento colectivo sobre el rol de la violencia sistemática en la historia reciente de México.</span></p>
+                                            </div>
+                                        	<div class="slide_btn">
+                                            	<a href="http://astrovandalistas.cc/ast" target="new" class="btn_silver">sitio del proyecto</a>
+                                            </div>
+                                        </div>                                        
+                                    	<div class="slide_image ovr_links">
+                                                <div class="img_overlay">
+                                                   <a href="http://vimeo.com/46611303" class="icon_play video_fancybox"></a>
+                                                </div>
+                                                <img alt="Partial Staged Left" class="darkBorderFrame" src="images/slider_photos/4.png" />
+                                        </div>                                        
+                                    </div>
+                                </li>
+								<!-- 1st Slide end from here -->
+                                                                
+		
+                                <!-- 2nd Slide start from here -->
+								<li>
+                                	<div class="slide_left_content">
+                                        <div class="slide_imageL ovr_links">
+                                                <div class="img_overlay">
+                                                    <a href="http://www.youtube.com/watch?v=5GKMP8WdPuM" class="icon_play video_fancybox"></a>                                                    
+                                                </div>
+                                                <img alt="Video (Partial Staged Right)" class="darkBorderFrame" src="images/slider_photos/video.png" />
+                                        </div>
+                                        <div class="slide_contentL">
+                                        	<div class="slide_title">
+                                       	  <h2>El abismo no nos detiene</h2></div>
+                                        	<div class="slide_description">                                            	
+                                                <p><span id="docs-internal-guid-418abdb6-e8af-3acb-9194-2113c2adf090">Astrovandalistas propone una acción audiovisual en vivo que parte de la construcción de un archivo colectivo de la Primavera Mexicana: que los partícipes de la historia fueran quienes la escriben.</span></p>
+                                            </div>
+                                        	<div class="slide_btn">
+                                            	<a href="http://astrovandalistas.cc/abismo" target="new" class="btn_silver">Sitio del proyecto</a>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </li>
+                                <!-- 2nd Slide end from here -->
+              </ul>
+
+            </div>
+            
+            <br /><br /><br />
+
+            <div class="page_saperator"></div>
+            
+        </div>
+        
+<!-- ///////////////////////////////////////////// Latest Project container End ////////////////////////////////////////// -->
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////// About container Start ////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+      <div id="page_About" class="paddingTop40">        	
+            
+            <div class="page_title">
+               <h2>* Astrovandalistas</h2>
+            </div>
+            
+        <div class="padding2">
+              <h5 dir="ltr" id="docs-internal-guid-4bd5f946-e886-daad-24e4-d3b07e76a4e6">Somos un colectivo translocal que se enfoca en el desarrollo de proyectos que conjuntan investigación, acción artística, tecnología y activismo bajo la lógica del hacking urbano y la divulgación libre del conocimiento generado. </h5>
+                <h5><br />
+                </h5>
+                <h5 dir="ltr">Fundado en 2010 en Tijuana, el colectivo tiene su centro de operación en la Ciudad de México y lo conformamos personas localizadas en distintas zonas geográficas del continente.</h5>
+                <h5><br />
+                </h5>
+                <h5 dir="ltr">Trabajamos como un laboratorio de acción descentralizada y nuestra estrategia es generar tecnologías de bajo presupuesto que sean fácilmente replicables por otras personas en otros lugares. Nuestro trabajo está orientado por las metodologías low-budget, DIY, DIWO, free software, open hardware, etc.</h5>
+                <h5><br />
+                </h5>
+                <h5 dir="ltr">Nuestras líneas de acción son: la investigación de interfaces para la comunicación humano­-máquina y humano-­humano; la irrupción dentro del espacio público para la generación de experiencias individuales y/o colectivas, y el desarrollo de herramientas que posibiliten nuevas formas de manifestación colectiva mediadas por tecnologías 100% libres. </h5>
+                <h5><br />
+          </h5>
+          <h5 dir="ltr">Quienes conformamos Astrovandalistas hemos desarrollado proyectos en México, Brasil, Estados Unidos, Alemania, España, Chile y Argentina, en colaboración con el Media Lab Prado, Marginalia+Lab, Nuvem y el Centro Multimedia, entre otros.</h5>
+                <h6><br />
+                  <br />
+              </h6>
+        </div>
+            
+            <div class="paddingTop40"></div>
+      </div>
+
+<!-- ///////////////////////////////////////////// About container End /////////////////////////////////////////////////// -->
+
+
+
+<!-- //////////////////////////////////////////// presskit container Start ////////////////////////////////////////////////// -->
+
+
+
+
+      <div id="page_presskit" class="paddingTop40">
+        <div class="page_title">
+          <h2>Presskit</h2>
+        </div>
+
+        <div class="padding2">
+          <h4 class="btn_darkgray" id="docs-internal-guid-4bd5f946-e886-daad-24e4-d3b07e76a4e6" dir="ltr"><a href="descargas/aeffectlab.pdf"><strong>Descarga Catálogo</strong></a></h4>
+          <p dir="ltr">&nbsp;</p>
+          <h4 class="btn_darkgray" dir="ltr"><a href="descargas/Acarpetaprensa.pdf"><strong>Descarga Presskit</strong></a></h4>
+          <p dir="ltr">&nbsp;</p>
+          <h4 class="btn_darkgray"><a href="descargas/FotosAeffectLab.zip"><strong>Descarga carpeta de imagenes</strong></a></h4>
+          <p>&nbsp;</p>
+          <h4 class="btn_darkgray"><a href="descargas/logos.pdf"><strong>Descarga logos en vectores</strong></a></h4>
+        </div>
+            
+            <div class="paddingTop40"></div>
+      </div>
+
+<!-- ///////////////////////////////////////////// presskitcontainer End /////////////////////////////////////////////////// -->
+
+
+
+
+
+</div>
+</body>
+</html>

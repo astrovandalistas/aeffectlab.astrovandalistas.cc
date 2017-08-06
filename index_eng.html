@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>*Astrovandalistas</title>
+	
+<link rel="stylesheet" type="text/css" href="css/default_dark_light.css" />
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->	
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+    
+<!-- Anything Slider -->
+<link rel="stylesheet" type="text/css" href="css/theme-main.css" />    
+
+<!-- FancyBox CSS -->
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
+
+<!-- colorpicker CSS -->
+<link rel="stylesheet" media="screen" type="text/css" href="css/colorpicker.css" />
+  
+<link rel="shortcut icon" type="image/x-icon" href="images/favicons/favicon.ico">
+
+<style type="text/css">
+a:link {
+	color: #CCCCCC;
+}
+</style>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+<!-- custom-dark-light.js include nenu hover color chagne for dark left and light right theme -->
+<script src="js/custom-dark-light.js" type="text/javascript"></script>
+
+<!-- js/custom.js includes all custom js function which used in theme -->
+<script src="js/custom.js" type="text/javascript"></script>
+
+<!-- hoverIntent.js is plugin for hover effect -->
+<script src="js/hoverIntent.js" type="text/javascript"></script>
+
+<!-- For Cufon font replacement -->
+<script src="js/cufon-yui.js" type="text/javascript"></script>
+<script src="js/kalinga.font.js" type="text/javascript"></script>
+
+<!-- For Fancy Popup -->
+<script src="js/jquery.mousewheel-3.0.4.pack.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+
+<!-- Anything Slider -->
+<script src="js/jquery.anythingslider.js" type="text/javascript"></script>
+
+
+
+
+
+<!-- AnythingSlider initialization -->
+	<script type="text/javascript">
+		// DOM Ready
+		$(function(){
+		
+			// this is AnyThingSlider initialization for more settings option visit: http://proloser.github.com/AnythingSlider/ 
+			$('#slider').anythingSlider({
+			
+					theme               : "main",
+					autoPlay            : true,
+					buildStartStop      : false,
+					navigationFormatter : null,
+					toggleArrows        : false,     // If true, side navigation arrows will slide out on hovering and hide @ other times
+				  	toggleControls      : false,     // if true, slide in controls (navigation + play/stop button) on hover and slide change, hide @ other times
+					pauseOnHover        : true,
+					resizeContents      : true,
+					easing              : "easeInOutBack",
+	 				animationTime       : 1400       // we can change delay here					     
+					
+					//Note:  to change the height of Slider please go to css/theme-main.css and change height of "div.anythingSlider-main" class					
+			});
+			
+
+	
+			
+						
+		// this is fancybox ( image overlay ) initialization for more option visit: http://fancybox.net/
+		// Auto Play youtube with fancy box : please ad " &autoplay=1 " at the end of youtube video url
+		$(".fancyBox").fancybox({
+				'overlayShow'	: true
+		});
+			
+		// this is fancybox ( video overlay ) initialization for youtube video for more option visit: http://fancybox.net/
+		$(".video_fancybox").click(function() {
+		$.fancybox({
+				'padding'		: 0,
+				'autoScale'		: false,
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none',
+				'title'			: this.title,
+				'width'		: 680,
+				'height'		: 495,
+				'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+				'type'			: 'swf',
+				'swf'			: {
+				'wmode'		: 'transparent',
+				'allowfullscreen'	: 'true'
+				}
+			});
+	
+			return false;
+		});			
+			
+
+		// this is fancybox ( grouped image overlay ) initialization for more option visit: http://fancybox.net/
+		$("a[rel=group_fancybox]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">'+ title +' <cite> Image' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? '' : '') + '</cite></span>';
+				}
+		});
+
+			
+		});
+	</script>
+    
+</head>   
+ 
+<body>
+
+<div class="wrapper">
+<!-- 
+	class="leftPanel" this div contain left panle and its Static  
+	class="leftPanel_inner" this div contain background of left panel
+    class="leftPanel_inner_border" this div contain right border of left panel
+-->
+<div class="leftPanel">
+	<div class="leftPanel_inner">
+		<div class="leftPanel_inner_border">    
+    		<div class="logo_container">
+            	<img alt="Stratum" src="images/dark_light/logo.png" />
+            </div>
+    		
+          <p class="intro_text"><a href="index.html">Español</a></p>   
+                
+                         
+
+<!-- //////////////////////////////////////////// Left Navigation Start //////////////////////////////////////////////////// -->            
+            <ul class="nav_bar">
+                <!--  <li><a><span> use these tags for every menu item -->            
+            	<li class="active_link"><a href="#page_Home"><span>AEffect Lab </span></a></li>                
+            	<li><a href="#page_LatestProjects"><span>Previous projects</span></a></li>
+            	<li><a href="#page_About"><span>About Us</span></a></li>
+            	<li><a href="#page_presskit"><span>Presskit</span></a></li>
+            </ul>
+<!-- ///////////////////////////////////////////// Left Navigation End ///////////////////////////////////////////////////// -->
+            
+            <div class="socialIcon"> 
+                <!--  there are 40 social bookmark icons you can use as many as you want all 40 are listed below with there classes -->
+                
+                <a class="facebook" title="facebook" href="https://www.facebook.com/pages/Astrovandalistas/115153808562518"><span></span></a><a class="twitter2" title="twitter" href="https://twitter.com/astrovandalista"><span></span></a>
+                                
+				<!--            	
+				List of all avilable icons you can use these
+                
+
+                <a class="aim" title="aim" href="javascript:void(0)"><span></span></a>
+                <a class="amazon" title="amazon" href="javascript:void(0)"><span></span></a>
+                <a class="buzzyahoo" title="buzzyahoo" href="javascript:void(0)"><span></span></a>
+            	<a class="delicious" title="delicious" href="javascript:void(0)"><span></span></a>                
+				<a class="deviantart" title="deviantart" href="javascript:void(0)"><span></span></a>
+                <a class="digg1" title="digg" href="javascript:void(0)"><span></span></a>                
+                <a class="dribble" title="dribble" href="javascript:void(0)"><span></span></a>                
+                <a class="flickr" title="flickr" href="javascript:void(0)"><span></span></a>
+            	<a class="fffound" title="ffound" href="javascript:void(0)"><span></span></a>
+                <a class="fireeagle" title="fireeagle" href="javascript:void(0)"><span></span></a>
+            	<a class="googletalk" title="googletalk" href="javascript:void(0)"><span></span></a>
+                <a class="itunes" title="itunes" href="javascript:void(0)"><span></span></a>
+                <a class="lastfm" title="lastfm" href="javascript:void(0)"><span></span></a>
+                <a class="google" title="google" href="javascript:void(0)"><span></span></a>
+            	<a class="messendertahoo" title="messenger yahoo" href="javascript:void(0)"><span></span></a>
+            	<a class="messenger" title="messenger" href="javascript:void(0)"><span></span></a>
+                <a class="myspace" title="myspace" href="javascript:void(0)"><span></span></a>
+                <a class="netvibes" title="netvibes" href="javascript:void(0)"><span></span></a>
+            	<a class="openid" title="openid" href="javascript:void(0)"><span></span></a>
+            	<a class="orkut" title="orkut" href="javascript:void(0)"><span></span></a>
+                <a class="picasa" title="picasa" href="javascript:void(0)"><span></span></a>
+                <a class="reddit" title="reddit" href="javascript:void(0)"><span></span></a>
+                <a class="shareit" title="shareit" href="javascript:void(0)"><span></span></a>
+                <a class="skype" title="skype" href="javascript:void(0)"><span></span></a>
+                <a class="stumbleupon" title="stumbleupon" href="javascript:void(0)"><span></span></a>
+                <a class="technorati" title="technorati" href="javascript:void(0)"><span></span></a>
+            	<a class="tumbrl" title="tumbrl" href="javascript:void(0)"><span></span></a>
+            	<a class="twitter" title="twitter" href="javascript:void(0)"><span></span></a>
+                <a class="upcoming" title="upcoming" href="javascript:void(0)"><span></span></a>
+            	<a class="vcard" title="vcard" href="javascript:void(0)"><span></span></a>
+            	<a class="vimeo" title="vimeo" href="javascript:void(0)"><span></span></a>
+                <a class="wikipedia" title="wikipedia" href="javascript:void(0)"><span></span></a>
+                <a class="yahoo" title="yahoo" href="javascript:void(0)"><span></span></a>
+            	<a class="yelp" title="yelp" href="javascript:void(0)"><span></span></a>
+                <a class="youtube" title="youtube" href="javascript:void(0)"><span></span></a>
+                -->
+                
+
+            </div>
+            
+  		</div>
+    </div>
+</div>
+
+
+
+<div class="rightPanel">
+	<div class="rightPannelInner">
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////// Home container Start//////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div id="page_Home">        	
+            
+            <p>
+              
+              <!--  this is place for home text if you want you can add any type of text or content here or remove this part if you dont need --><img src="images/dark_light/astroInv.png" width="650" height="599" /><br />
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+            <h3 dir="ltr" id="docs-internal-guid-4bd5f946-e6df-babe-5742-1c99a5ef1061">&nbsp;</h3>
+            <h3 dir="ltr">&nbsp;</h3>
+          <p dir="ltr">&nbsp;</p>
+            <h3 dir="ltr">&nbsp;</h3>
+            <h3 dir="ltr">&nbsp;</h3>
+            <h3 dir="ltr"><strong>Æffect Lab _ Tecnologías Disruptivas </strong></h3>
+            <br />
+            <br />
+            <blockquote>
+              <p dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-c8bd-c22e-c49c21ce30fb">Disruptive will be any event or situation with the potential capability of bursting into the psychism and producing reactions that alter its ability of integration and elaboration.</strong></p>
+M. Benyakar.            </blockquote>
+            <h5><br />
+              <br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">Æffect Lab &nbsp;is a framework that encourages the creation of affective models of communication that are specific to a location, environment or group of people.</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">The project consists of research and creation of a free communication network based on affectivity: a parallel network to the Internet in which cooperation and human-human communication develop and take place.</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">Æffect Lab functions under the logic of urban hacking: the application of technological resources to modify urban elements, augmenting them with the ability for telematic operation.</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">This network is composed of several communication prototypes, used to insert virtual messages in the physical public space. The prototypes are: AST:Arma Sonora Telemática (Telematic Sound Weapon), VLE:Ventana de Lecturas Efímeras (Ephemeral Reading Window), CAU:Campo de Afinidades Ubicuas (Ubiquitous Affinities Field), and ISO:Instrumento Sintetizador de Opinión (Instrument for Synthesizing Opinion). For the core of this network, we developed a module called LocalNet, which has the capability to receive messages sent to the Æffect Lab network and redirect them to the prototypes. This enables the network to receive messages from our web application, SMS text messages, Twitter, and local autonomous networks running a local web application.</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">The prototypes presented were developed based on our experiences and interests, and serve as examples of what can be done with such a framework. It&rsquo;s the start of a conversation about the integrative possibilities of this type of communication tools in diverse communities, and a questioning of the use of these systems.</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">What are the social and psychological limits of communications mediated by commercial technologies?</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">What physical and virtual distances emerge from these network-imposed limits?</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">How can we ensure collective participation in social structures that are in constant transformation, where the speed of technological development is constantly pushing our own limits of understanding and knowledge?</strong></h5>
+            <h5><br />
+            </h5>
+            <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-eba2-59eb-6a18-8d372a7872e7">With this exhibition we start the project, displaying the first stage of our research and development, which will continue during the next couple of months at workshops and interventions that will take place in Mexico and the United States.</strong></h5>
+            <br />
+            <h5 dir="ltr">&nbsp;</h5>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          <p>&nbsp;</p>
+            <p><img src="images/portfolio_images/aeffectlab.jpg" width="680" height="456" /></p>
+            <p>&nbsp;</p>
+          <p>&nbsp; </p>
+          <p><img src="images/portfolio_images/IMG_0294.jpg" width="680" height="456" /></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><img src="images/portfolio_images/IMG_0303.jpg" width="680" height="456" /></p>
+          <p>&nbsp;</p>
+          <p><img src="images/portfolio_images/IMG_0264.jpg" width="680" height="456" /></p>
+            
+            <div class="page_saperator"></div>
+            
+        </div>
+        
+
+<!--////////////////////////////////////////////// Home container End //////////////////////////////////////////////////// -->
+
+
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////// Latest Project container Start ///////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div id="page_LatestProjects" class="paddingTop40">
+        	
+            <div class="page_title">
+               <h2>Previous projects</h2>
+            </div>
+            
+            <!-- Slider start from here we used Anything slider plugin -->
+            <div class="anything_slider">
+            	<ul id="slider">
+
+                                
+                                <!-- 1st Slide start from here if you use dynamic slider item you can use this LI as a repeater it will display list of items -->
+                                <li>
+                                	<div class="slide_left_content">
+                                    	<div class="slide_content">
+                                        	<div class="slide_title">
+                                       	  <h2>Arma Sonora Telemática </h2>
+                                       	  <p dir="ltr"><strong id="docs-internal-guid--bd55240-eba3-8c88-99d1-2e56ffab8129">(Telematic Sound Weapon)</strong></p>
+                                       	  <br />
+                                       	  </div>
+                                        	<div class="slide_description">                                            	
+                                                <p dir="ltr">AST is our first proposal for a tool that uses social networks to generate collective protests in a physical space. A weapon is a device that amplifies the direction and the magnitude of a force. We want to amplify the collective questioning of subjects that affect our social fabric.
+</p>
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        	<div class="slide_btn">
+                                            	<a href="http://astrovandalistas.cc/ast" target="new" class="btn_silver">project website</a>
+                                            </div>
+                                        </div>                                        
+                                    	<div class="slide_image ovr_links">
+                                                <div class="img_overlay">
+                                                   <a href="http://vimeo.com/46611303" class="icon_play video_fancybox"></a>
+                                                </div>
+                                                <img alt="Partial Staged Left" class="darkBorderFrame" src="images/slider_photos/4.png" />
+                                        </div>                                        
+                                    </div>
+                                </li>
+								<!-- 1st Slide end from here -->
+                                                                
+		
+                                <!-- 2nd Slide start from here -->
+								<li>
+                                	<div class="slide_left_content">
+                                        <div class="slide_imageL ovr_links">
+                                                <div class="img_overlay">
+                                                    <a href="http://www.youtube.com/watch?v=5GKMP8WdPuM" class="icon_play video_fancybox"></a>                                                    
+                                                </div>
+                                                <img alt="Video (Partial Staged Right)" class="darkBorderFrame" src="images/slider_photos/video.png" />
+                                        </div>
+                                        <div class="slide_contentL">
+                                        	<div class="slide_title">
+                                       	  <h2>El abismo no nos detiene</h2></div>
+                                        	<div class="slide_description">                                            	
+                                                <p><strong id="docs-internal-guid-7d60230c-effa-1016-9f1f-2b5d628f7929">Astrovandalistas proposes a live audio-visual action derived from the creation of a collective archive of the Mexican Spring, so that the participants of this history were also the ones who wrote it. </strong></p>
+                                            </div>
+                                        	<div class="slide_btn">
+                                            	<a href="http://astrovandalistas.cc/abismo" target="new" class="btn_silver">project website</a>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </li>
+                                <!-- 2nd Slide end from here -->
+              </ul>
+
+            </div>
+            
+            <br /><br /><br />
+
+            <div class="page_saperator"></div>
+            
+        </div>
+        
+<!-- ///////////////////////////////////////////// Latest Project container End ////////////////////////////////////////// -->
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////// About container Start ////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+      <div id="page_About" class="paddingTop40">        	
+            
+            <div class="page_title">
+               <h2>* Astrovandalistas</h2>
+            </div>
+            
+        <div class="padding2">
+              <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-ebba-4d47-9f79-87b6f1926d0f">We are a translocal collective that focuses on the development of projects that combine research, artistic action, technology, activism, urban hacking and open knowledge produced from each of these processes.</strong></h5>
+              <h5><br />
+              </h5>
+              <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-ebba-4d47-9f79-87b6f1926d0f">Founded in Tijuana in 2010, the collective is based in Mexico City, with members in different geographical locations throughout the world.</strong></h5>
+              <h5 dir="ltr"> </h5>
+              <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-ebba-4d47-9f79-87b6f1926d0f">We work as a laboratory of decentralized action, and our strategy is to generate low budget technologies that can be easily replicated by people in different places. Our work is influenced by low-budget, DIY, DIWO cultures and the free software and open hardware movements.</strong></h5>
+              <h5><br />
+              </h5>
+              <h5 dir="ltr"><strong id="docs-internal-guid--bd55240-ebba-4d47-9f79-87b6f1926d0f">Our actions are guided by the research of interfaces for human-machine and human-human communication, the use of public space for creating individual and/or collective experiences, and the development of tools that enable new forms of collective communication mediated entirely by open technologies.</strong></h5>
+              <h5><br />
+                The members of Astrovandalistas have exhibited in Mexico, Brazil, Germany, Spain and Chile in collaboration with Media Lab Prado, Marginalia+Lab, Nuvem and Centro Multimedia Mexico.
+              </h5>
+          <h5 dir="ltr" id="docs-internal-guid-4bd5f946-e886-daad-24e4-d3b07e76a4e6">&nbsp;</h5>
+                <h6><br />
+                  <br />
+              </h6>
+        </div>
+            
+            <div class="paddingTop40"></div>
+      </div>
+
+<!-- ///////////////////////////////////////////// About container End /////////////////////////////////////////////////// -->
+
+
+
+<!-- //////////////////////////////////////////// presskit container Start ////////////////////////////////////////////////// -->
+
+
+
+
+      <div id="page_presskit" class="paddingTop40">        	
+            
+            <div class="page_title">
+              <h2>Presskit        </h2>
+        </div>
+            
+        <div class="padding2">
+          <h4 class="btn_darkgray" id="docs-internal-guid-4bd5f946-e886-daad-24e4-d3b07e76a4e6" dir="ltr"><a href="descargas/aeffectlab.pdf"><strong>Download  Catalog</strong></a></h4>
+          <p>&nbsp;</p>
+          <h4 class="btn_darkgray" dir="ltr"><a href="descargas/AEpresskit.pdf"><strong>Download presskit</strong></a></h4>
+          <p dir="ltr">&nbsp;</p>
+          <h4 class="btn_darkgray"><a href="descargas/FotosAeffectLab.zip"><strong>Download pictures</strong></a></h4>
+          <p>&nbsp;</p>
+          <h4 class="btn_darkgray"><a href="descargas/logos.pdf"><strong>Download logos</strong></a></h4>
+        </div>
+            
+            <div class="paddingTop40"></div>
+      </div>
+
+<!-- ///////////////////////////////////////////// presskitcontainer End /////////////////////////////////////////////////// -->
+
+
+
+
+
+</div>
+</body>
+</html>
